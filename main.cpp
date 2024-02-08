@@ -6,7 +6,6 @@
 #include <tuple>
 #include <type_traits>
 #include <vector>
-#include <tuple>
 /*
 Условность его заключается в том, что количество элементов не обязательно должно
 быть равно 4- ём или 8-ми, а также каждый элемент не обязательно должен быть
@@ -103,17 +102,14 @@ print_ip(const T &ip) {
 (одним символом точка). Элементы выводятся как есть. В случае, если типы кортежа
 не одинаковы, должна быть выдана ошибка при компиляции кода.*/
 
-#include <experimental/tuple>
+// #include <experimental/tuple>
 template <typename T, typename... Args,
-typename std::enable_if<std::is_same<T, Args...>::value, void>::type>
-auto print_ip(std::tuple<T, Args...> ip) 
-{
+          typename std::enable_if<std::is_same<T, Args...>::value, void>::type>
+auto print_ip(std::tuple<T, Args...> ip) {
 
-  std::experimental::apply([](auto&&... args) {((std::cout << args << '.'), ...);}, ip);
-  std::cout << std::endl;
+  // std::apply([](auto&&... args) {((std::cout << args << '.'), ...);}, ip);
+  // std::cout << std::endl;
 }
-
-
 
 int main(int argc, char const *argv[]) {
 
@@ -124,7 +120,7 @@ int main(int argc, char const *argv[]) {
   print_ip(std::string{"Hello, World!"});         // Hello, World!
   print_ip(std::vector<int>{100, 200, 300, 400}); // 100.200.300.400
   print_ip(std::list<short>{400, 300, 200, 100}); // 400.300.200.100
-  //print_ip(std::make_tuple(123, 456, 789, 0) ); // 123.456.789.0
+  // print_ip(std::make_tuple(123, 456, 789, 0) ); // 123.456.789.0
 
   return 0;
 }
