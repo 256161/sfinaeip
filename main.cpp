@@ -102,7 +102,8 @@ print_ip(const T &ip) {
 (одним символом точка). Элементы выводятся как есть. В случае, если типы кортежа
 не одинаковы, должна быть выдана ошибка при компиляции кода.*/
 
-// #include <experimental/tuple>
+/*brief print_ip
+*/
 template <typename T, typename... Args,
           typename std::enable_if<std::is_same<T, Args...>::value, void>::type>
 auto print_ip(std::tuple<T, Args...> ip) {
