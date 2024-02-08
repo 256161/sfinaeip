@@ -4,6 +4,7 @@ cmake_minimum_required(VERSION 3.10)
 set(PATCH_VERSION "10")
 set(PROJECT_VESRION 0.0.10)
 
+
 project(sfinaeIp VERSION ${PROJECT_VESRION})
 
 #find_package(Boost COMPONENTS unit_test_framework REQUIRED)
