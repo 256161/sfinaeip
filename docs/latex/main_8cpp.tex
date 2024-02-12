@@ -1,0 +1,125 @@
+\hypertarget{main_8cpp}{}\doxysection{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+{\ttfamily \#include $<$complex$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structEnableIf_3_01true_00_01Type_01_4}{Enable\+If$<$ true, Type $>$}}
+\item 
+struct \mbox{\hyperlink{structIsSame}{Is\+Same$<$ T, U $>$}}
+\item 
+struct \mbox{\hyperlink{structIsSame_3_01T_00_01T_01_4}{Is\+Same$<$ T, T $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if$<$ std\+::is\+\_\+integral$<$ T $>$\+::value, void $>$\+::type \mbox{\hyperlink{main_8cpp_a4420698147e6594a8035e247aa0864e6}{print\+\_\+ip}} (T ip)
+\begin{DoxyCompactList}\small\item\em Первый шаблон\+: \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T, std\+::string $>$\+::value, void $>$\+::type \mbox{\hyperlink{main_8cpp_a1bb45d64f046480a8d4c709550c8d025}{print\+\_\+ip}} (const T \&ip)
+\begin{DoxyCompactList}\small\item\em Второй шаблон\+: \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ std\+::vector$<$ typename T\+::value\+\_\+type $>$, T $>$\+::value$\vert$$\vert$std\+::is\+\_\+same$<$ std\+::list$<$ typename T\+::value\+\_\+type $>$, T $>$\+::value, void $>$\+::type \mbox{\hyperlink{main_8cpp_a839e068c2f25dc48aaa9a7ccc2ccb4b6}{print\+\_\+ip}} (const T \&ip)
+\begin{DoxyCompactList}\small\item\em Третий шаблон\+: \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename... Args, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T, Args... $>$\+::value, void $>$\+::type $>$ }\\auto \mbox{\hyperlink{main_8cpp_af1dcbf789b50a35ab4b233891ec045ed}{print\+\_\+ip}} (std\+::tuple$<$ T, Args... $>$ ip)
+\begin{DoxyCompactList}\small\item\em Четвертый шаблон\+: \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}{main}} (int argc, char const $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}\label{main_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char const $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_a1bb45d64f046480a8d4c709550c8d025}\label{main_8cpp_a1bb45d64f046480a8d4c709550c8d025}} 
+\index{main.cpp@{main.cpp}!print\_ip@{print\_ip}}
+\index{print\_ip@{print\_ip}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_ip()}{print\_ip()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::enable\+\_\+if$<$std\+::is\+\_\+same$<$T, std\+::string$>$\+::value, void$>$\+::type print\+\_\+ip (\begin{DoxyParamCaption}\item[{const T \&}]{ip }\end{DoxyParamCaption})}
+
+
+
+Второй шаблон\+: 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Адрес} & может быть представлен в виде строки. Выводится как есть, вне зависимости от содержимого \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+вывод ip адреса 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_a839e068c2f25dc48aaa9a7ccc2ccb4b6}\label{main_8cpp_a839e068c2f25dc48aaa9a7ccc2ccb4b6}} 
+\index{main.cpp@{main.cpp}!print\_ip@{print\_ip}}
+\index{print\_ip@{print\_ip}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_ip()}{print\_ip()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$std\+::vector$<$typename T\+::value\+\_\+type$>$, T$>$\+::value $\vert$$\vert$ std\+::is\+\_\+same$<$std\+::list$<$typename T\+::value\+\_\+type$>$, T$>$\+::value, void$>$\+::type print\+\_\+ip (\begin{DoxyParamCaption}\item[{const T \&}]{ip }\end{DoxyParamCaption})}
+
+
+
+Третий шаблон\+: 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Адрес} & может быть представлен в виде контейнеров {\ttfamily std\+::list}, {\ttfamily std\+::vector}. Выводится полное содержимое контейнера поэлементно и разделяется {\ttfamily .} (символом точка). Элементы выводятся как есть. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+вывод ip адреса 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_af1dcbf789b50a35ab4b233891ec045ed}\label{main_8cpp_af1dcbf789b50a35ab4b233891ec045ed}} 
+\index{main.cpp@{main.cpp}!print\_ip@{print\_ip}}
+\index{print\_ip@{print\_ip}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_ip()}{print\_ip()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename... Args, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T, Args... $>$\+::value, void $>$\+::type $>$ \\
+auto print\+\_\+ip (\begin{DoxyParamCaption}\item[{std\+::tuple$<$ T, Args... $>$}]{ip }\end{DoxyParamCaption})}
+
+
+
+Четвертый шаблон\+: 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Опционально} & адрес может быть представлен в виде {\ttfamily std\+::tuple} при условии, что все типы одинаковы. Выводится полное содержимое поэлементно и разделяется {\ttfamily .} (одним символом точка). Элементы выводятся как есть. В случае, если типы кортежа не одинаковы, должна быть выдана ошибка при компиляции кода \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+вывод ip адреса 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_a4420698147e6594a8035e247aa0864e6}\label{main_8cpp_a4420698147e6594a8035e247aa0864e6}} 
+\index{main.cpp@{main.cpp}!print\_ip@{print\_ip}}
+\index{print\_ip@{print\_ip}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_ip()}{print\_ip()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::enable\+\_\+if$<$std\+::is\+\_\+integral$<$T$>$\+::value, void$>$\+::type print\+\_\+ip (\begin{DoxyParamCaption}\item[{T}]{ip }\end{DoxyParamCaption})}
+
+
+
+Первый шаблон\+: 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Адрес} & может быть представлен в виде произвольного целочисленного типа. Выводить побайтово в беззнаковом виде, начиная со старшего байта, с символом {\ttfamily .} (символ точки) в качестве разделителя. Выводятся все байты числа. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+вывод ip адреса 
+\end{DoxyReturn}

@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 
 
-set(PATCH_VERSION "15")
-set(PROJECT_VESRION 0.0.15)
+set(PATCH_VERSION "16")
+set(PROJECT_VESRION 0.0.16)
 
 
 project(sfinaeIp VERSION ${PROJECT_VESRION})
